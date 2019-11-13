@@ -1,0 +1,23 @@
+<ul>
+<% if flash[:error]%>
+    <% flash[:error].each do |error| %>
+        <li><%= error %></li>
+    <% end %>
+<% end %>
+</ul>
+
+<h1> Meet your new best friend! </h1>
+
+<%= form_for @dog do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name%><br />
+    <%= f.label :fur_color %>
+    <%= f.text_field :fur_color%><br />
+    <%= f.label :breed %>
+    <%= f.text_field :breed%><br />
+    <%= f.label :bones %>
+    <%= f.text_field :bones%><br />
+    <%= f.label :owner %>
+    <%= f.text_field :owner%><br />
+    <%= f.submit %>
+<% end %>
